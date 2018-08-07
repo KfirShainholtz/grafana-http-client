@@ -1,0 +1,31 @@
+{
+  "name": "grafana-node-sdk",
+  "version": "1.0.0",
+  "description": "A grafana api wrapper powered by axios",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "grafana",
+    "sdk",
+    "api"
+  ],
+  "author": "Kfir Shainholtz",
+  "license": "ISC",
+  "dependencies": {
+    "await-to": "^0.1.0",
+    "await-to-js": "^2.0.1",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.116",
+    "eslint": "^5.3.0",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "^3.0.1"
+  }
+}

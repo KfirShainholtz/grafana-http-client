@@ -1,0 +1,30 @@
+{
+  "extends": "tslint-config-airbnb",
+  "linterOptions": {
+    "exclude": [
+      "**/node_modules/**/*"
+    ]
+  },
+  "rules": {
+    "max-line-length": [
+      true,
+      121
+    ],
+    "indent": [
+      true,
+      "spaces",
+      4
+    ],
+    "ter-indent": [
+      true,
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "import-name": false,
+    "ter-arrow-parens": false,
+    "object-shorthand-properties-first": false,
+    "align": false
+  }
+}
