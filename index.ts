@@ -7,7 +7,7 @@ import dashboardPermissions from './lib/public/api/dashboard-permissions';
 import dashboardVersions from './lib/public/api/dashboard-versions';
 import dashboard from './lib/public/api/dashboard';
 import folderPermissions from './lib/public/api/folder-permissions';
-import misc from './lib/public/api/misc';
+import misc from './lib/public/api/other';
 import organisation from './lib/public/api/organisation';
 import preferences from './lib/public/api/preferences';
 import snapshot from './lib/public/api/snapshot';
