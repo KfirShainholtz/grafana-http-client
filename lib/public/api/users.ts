@@ -49,8 +49,8 @@ export default class Users extends GrafanaHTTPApi {
         // TODO: maybe remove it, and use the saved authorization key supplied first when initiating the class itself.
         return this.httpClient.get(`/api/user`, {
             headers: {
-                Authorization: key
-            }
+                Authorization: key,
+            },
         })
     }
 
