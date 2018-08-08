@@ -14,10 +14,10 @@ export default class Users extends GrafanaHTTPApi {
 
     searchUsers(perPage: number = 1000, page: number = 1): Promise<any> {
         // todo: requires basic authentication
-        return this.httpClient.get('/api/admin/stats');
+        return this.httpClient.get(`/api/admin/stats`);
     }
 
-    searchUsersWithPaging(perpage: number = 10, page: number = 1, query?: string) : Promise<any>{
+    searchUsersWithPaging(perpage: number = 10, page: number = 1, query?: string) : Promise<any> {
         return this.httpClient.get(`/api/users/search?perpage=${perpage}&page=${page}&query=${query}`);
     }
 
@@ -44,10 +44,10 @@ export default class Users extends GrafanaHTTPApi {
      */
     getActualUser(authorizationKey?: string) {
         const key = authorizationKey || this.authorizationKey;
-        if (!key) throw new Error('An authorization key must exist');
+        if (!key) throw new Error(`An authorization key must exist`);
 
         // TODO: maybe remove it, and use the saved authorization key supplied first when initiating the class itself.
-        return this.httpClient.get('/api/user', {
+        return this.httpClient.get(`/api/user`, {
             headers: {
                 Authorization: key
             }
@@ -70,7 +70,7 @@ export default class Users extends GrafanaHTTPApi {
     starDashboard(dashboardId: number) {
         return this.httpClient.post(`/api/user/stars/dashboard/${dashboardId}`);
     }
-    
+
     unstarDashboard(dashboardId: number) {
         return this.httpClient.delete(`/api/user/stars/dashboard/${dashboardId}`);
     }

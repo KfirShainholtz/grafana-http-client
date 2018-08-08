@@ -1,10 +1,8 @@
-export default interface IUserModel {
-    email: string,
-    name: string,
-    login: string,
-    theme: Theme;
-}
+import Theme from './preferencesModel';
 
-export enum Theme {
-    'dark', 'light'
+export default interface IUserModel {
+    email: string;
+    name: string;
+    login: string;
+    theme: Theme;
 }
