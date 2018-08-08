@@ -18,6 +18,6 @@ export default class GrafanaHTTPApi implements IGrafanaHTTPApi {
 }
 
 export interface IGrafanaHTTPApi {
-    httpClient: AxiosInstance,
-    authorizationKey?: string,
+    httpClient: AxiosInstance;
+    authorizationKey?: string;
 }

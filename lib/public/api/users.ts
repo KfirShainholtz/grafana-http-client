@@ -29,7 +29,7 @@ export default class Users extends GrafanaHTTPApi {
         return this.httpClient.get(`/api/users/lookup?loginOrEmail=${usernameOrEmail}`);
     }
 
-    updateUser(id: number, user: Partial<IUserModel>) { //partial?
+    updateUser(id: number, user: Partial<IUserModel>) {
         return this.httpClient.put(`/api/users/:${id}`, user);
     }
 
@@ -39,7 +39,7 @@ export default class Users extends GrafanaHTTPApi {
 
     /**
      * Get a user based on a given authorization key (or using the preconfigured one).
-     * @param authorizationKey An optional key to use for retrieving other users 
+     * @param authorizationKey An optional key to use for retrieving other users
      * besides the current (if any key supplied when initiating the class)
      */
     getActualUser(authorizationKey?: string) {
@@ -51,7 +51,7 @@ export default class Users extends GrafanaHTTPApi {
             headers: {
                 Authorization: key,
             },
-        })
+        });
     }
 
     changePassword(changePasswordObj: IChangePasswordModel) {
