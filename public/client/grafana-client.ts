@@ -6,6 +6,6 @@ export default class GrafanaClient {
     constructor(baseURL: string, authKey: string) {
         this.httpClient = axios.create({
             baseURL,
-        })
+        });
     }
 }
