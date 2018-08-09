@@ -4,6 +4,6 @@ export default interface IDashboardMeta {
     canEdit?: boolean;
     canStar?: boolean;
     url?: string;
-    expires?: Date;
-    created?: Date;
+    expires?: Date | string;
+    created?: Date | string;
 }
