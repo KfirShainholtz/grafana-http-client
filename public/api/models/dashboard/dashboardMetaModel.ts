@@ -1,4 +1,4 @@
-export default interface IDashboardMeta {
+export default interface IDashboardMetaModel {
     isStarred?: boolean;
     canSave?: boolean;
     canEdit?: boolean;
