@@ -10,6 +10,12 @@ export enum Timezone {
     Default = '',
 }
 
+export enum GraphToolTips {
+    Default = 0,
+    SharedCrossHair = 1,
+    SharedCrossHairAndTooltip = 1,
+}
+
 export default interface IPreferencesModel {
     theme: Theme;
     homeDashboardId?: number;

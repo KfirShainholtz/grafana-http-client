@@ -1,6 +1,4 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IOrganisationModel from './models/organisationModel';
-import IUserModel from './models/userModel';
 import IPreferencesModel from './models/preferencesModel';
 
 export default class Preferences extends GrafanaHTTPApi {

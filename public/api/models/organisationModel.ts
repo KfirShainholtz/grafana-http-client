@@ -1,4 +1,4 @@
 export default interface IOrganisationModel {
-    id: number,
-    name: string,
+    id: number;
+    name: string;
 }
