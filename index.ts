@@ -1,22 +1,34 @@
 import Admin from './public/api/admin';
 import Alerting from './public/api/alerting';
 import Users from './public/api/users';
-import annotations from './public/api/annotations';
-import authentication from './public/api/authentication';
-import dashboardPermissions from './public/api/dashboard-permissions';
-import dashboardVersions from './public/api/dashboard-versions';
-import dashboard from './public/api/dashboard';
-import folderPermissions from './public/api/folder-permissions';
-import misc from './public/api/other';
-import organisation from './public/api/organisation';
-import preferences from './public/api/preferences';
-import snapshot from './public/api/snapshot';
-import teams from './public/api/teams';
+import Annotations from './public/api/annotations';
+import Authentication from './public/api/authentication';
+import DashboardPermissions from './public/api/dashboard-permissions';
+import DashboardVersions from './public/api/dashboard-versions';
+import Dashboard from './public/api/dashboard';
+import FolderPermissions from './public/api/folder-permissions';
+import Misc from './public/api/other';
+import Organisation from './public/api/organisation';
+import Preferences from './public/api/preferences';
+import Snapshot from './public/api/snapshot';
+import Teams from './public/api/teams';
 
 import GrafanaClient from './public/client/grafana-client';
-
-export const grafanaAdmin = Admin;
-export const grafanaAlerting = Alerting;
-export const grafanaUsers = Users;
+export {
+    Admin,
+    Alerting,
+    Users,
+    Annotations,
+    Authentication,
+    DashboardPermissions,
+    DashboardVersions,
+    Dashboard,
+    FolderPermissions,
+    Misc,
+    Organisation,
+    Preferences,
+    Snapshot,
+    Teams,
+};
 
 export default GrafanaClient;

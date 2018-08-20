@@ -1,10 +1,10 @@
 import axios, { AxiosInstance } from 'axios';
 
-export default class GrafanaHTTPApi implements IGrafanaHTTPApi {
-    httpClient: AxiosInstance;
-    authorizationKey?: string | undefined;
+export default class GrafanaHTTPApi /***implements IGrafanaHTTPApi***/ {
+    protected httpClient: AxiosInstance;
+    protected authorizationKey?: string | undefined;
 
-    constructor(authorizationKey?: string, baseURL?: string) {
+    constructor(baseURL?: string, authKey?: string) {
         // TODO: maybe create another http client that will use the admin@admin
         // TODO: add multiple authentication
         // TODO: maybe add the example request + response for each API
@@ -15,9 +15,4 @@ export default class GrafanaHTTPApi implements IGrafanaHTTPApi {
             },
         });
     }
-}
-
-export interface IGrafanaHTTPApi {
-    httpClient: AxiosInstance;
-    authorizationKey?: string;
 }

@@ -3,7 +3,6 @@ import IPermissionModel from './models/permissionsModel';
 
 export default class DashboardPermissions extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: string) {
-        // TODO: add basic authentication
         super(baseURL);
     }
 

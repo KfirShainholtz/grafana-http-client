@@ -1,6 +1,6 @@
 export default interface IAnnotatinsQueryModel {
-    from: number | string; // epoch time in ms
-    to: number | string;
+    from: number; // epoch time in ms
+    to: number;
     limit: number;
     alertId: number;
     dashboardId: number;
