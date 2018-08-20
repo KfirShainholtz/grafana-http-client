@@ -3,7 +3,7 @@ export enum UrlParseMethod {
 }
 
 class UrlParsing {
-    parseMethodMap: Map<string, (pair: any) => string>;
+    private parseMethodMap: Map<string, (pair: any) => string>;
 
     constructor() {
         this.parseMethodMap = new Map();

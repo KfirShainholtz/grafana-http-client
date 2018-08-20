@@ -1,5 +1,5 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IPermissionModel from './models/permissionsModel';
+import IPermissionModel from './models/permissions/permissionsModel';
 /**
  * The deprecated requests are going to be removed, so they won't be expressed here as well.
  * See more http://docs.grafana.org/http_api/dashboard/

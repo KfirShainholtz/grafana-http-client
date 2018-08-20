@@ -14,7 +14,35 @@ import Preferences from './public/api/preferences';
 import Snapshot from './public/api/snapshot';
 import Teams from './public/api/teams';
 
+import IAdminChangePasswordModel from './public/api/models/admin/adminChangePasswordModel';
+import IAdminPermissionsModel from './public/api/models/admin/adminPermissionsModel';
+import IAnnotationsModel from './public/api/models/annotations/annotationModel';
+import IAnnotationsQueryModel from './public/api/models/annotations/annotationsQueryModel';
+import IGraphiteAnnotationsModel from './public/api/models/annotations/graphiteAnnotationModel';
+import IAuthenticationModel from './public/api/models/authentication/authenticationModel';
+import ICreateOrUpdateDashboardModel from './public/api/models/dashboard/createOrUpdateDashboardModel';
+import IDashboardDifferencesModel from './public/api/models/dashboard/dashboardDifferenceModel';
+import IDashboardMetaModel from './public/api/models/dashboard/dashboardMetaModel';
+import IDashboardModel from './public/api/models/dashboard/dashboardModel';
+import IDashboardRestoreModel from './public/api/models/dashboard/dashboardRestoreModel';
+import IPanelModel from './public/api/models/dashboard/panelModel';
+import ITemplatingModel from './public/api/models/dashboard/templatingModel';
+import ITimePickerModel from './public/api/models/dashboard/timepickerModel';
+import IDatasourceModel from './public/api/models/datasource/datasourceModel';
+import ISnapshotModel from './public/api/models/snapshot/snapshotModel';
+import ISnapshotQueryModel from './public/api/models/snapshot/snapshotQueryModel';
+import ITeamMemberModel from './public/api/models/team/teamMemberModel';
+import ITeamModel from './public/api/models/team/teamModel';
+import ITeamQueryModel from './public/api/models/team/teamQueryModel';
+import IAlertNotificationModel from './public/api/models/alert/alertNotificationModel';
+import IAlertQueryModel from './public/api/models/alert/alertQueryModel';
+import IUserModel from './public/api/models/user/userModel';
+import IPreferencesModel from './public/api/models/preferences/preferencesModel';
+import IChangePasswordModel from './public/api/models/password/changePasswordModel';
+
 import GrafanaClient from './public/client/grafana-client';
+
+// API
 export {
     Admin,
     Alerting,
@@ -31,6 +59,35 @@ export {
     Preferences,
     Snapshot,
     Teams,
+};
+
+// Models
+export {
+    IAdminChangePasswordModel,
+    IAdminPermissionsModel,
+    IAnnotationsModel,
+    IAnnotationsQueryModel,
+    IGraphiteAnnotationsModel,
+    IAuthenticationModel,
+    ICreateOrUpdateDashboardModel,
+    IDashboardDifferencesModel,
+    IDashboardMetaModel,
+    IDashboardModel,
+    IDashboardRestoreModel,
+    IPanelModel,
+    ITemplatingModel,
+    ITimePickerModel,
+    IDatasourceModel,
+    ISnapshotModel,
+    ISnapshotQueryModel,
+    ITeamMemberModel,
+    ITeamModel,
+    ITeamQueryModel,
+    IAlertNotificationModel,
+    IAlertQueryModel,
+    IUserModel,
+    IPreferencesModel,
+    IChangePasswordModel,
 };
 
 export default GrafanaClient;

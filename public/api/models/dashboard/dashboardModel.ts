@@ -1,5 +1,5 @@
-import { Timezone, Theme, GraphToolTips } from '../preferencesModel';
-import ITimepickerModel from './timepickerModel';
+import { Timezone, Theme, GraphToolTips } from '../preferences/preferencesModel';
+import ITimePickerModel from './timepickerModel';
 import ITemplatingModel from './templatingModel';
 import IPanelModel from './panelModel';
 import IAnnotationModel from '../annotations/annotationModel';
@@ -12,7 +12,7 @@ export default interface IDashboardModel { // todo: just use partial
     style?: Theme;
     graphToolTip: GraphToolTips;
     time?: string;
-    timepicker?: ITimepickerModel;
+    timepicker?: ITimePickerModel;
     templating?: ITemplatingModel;
     annotations?: IAnnotationModel;
     refresh?: number;

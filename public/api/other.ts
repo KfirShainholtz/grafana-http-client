@@ -1,6 +1,6 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
 
-export default class Other extends GrafanaHTTPApi {
+export default class OrganisationOther extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: string) {
         // TODO: add basic authentication
         super(baseURL);

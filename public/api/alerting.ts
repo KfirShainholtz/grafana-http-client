@@ -1,6 +1,6 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IAlertQueryModel from './models/alertQueryModel';
-import IAlertNotificationModel from './models/alertNotificationModel';
+import IAlertQueryModel from './models/alert/alertQueryModel';
+import IAlertNotificationModel from './models/alert/alertNotificationModel';
 import UrlParsing from './utils/url-parsing';
 
 export default class Alerting extends GrafanaHTTPApi {

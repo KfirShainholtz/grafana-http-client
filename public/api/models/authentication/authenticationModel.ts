@@ -1,4 +1,4 @@
-import ClientRole from '../permissionsModel';
+import ClientRole from '../permissions/permissionsModel';
 
 export default interface IAuthenticationModel {
     name: string;

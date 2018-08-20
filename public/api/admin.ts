@@ -1,5 +1,5 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IUserModel from './models/userModel';
+import IUserModel from './models/user/userModel';
 import IAdminChangePasswordModel from './models/admin/adminChangePasswordModel';
 import IAdminPermissionsModel from './models/admin/adminPermissionsModel';
 

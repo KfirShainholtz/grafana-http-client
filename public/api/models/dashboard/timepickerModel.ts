@@ -1,4 +1,4 @@
-export default interface ITimepickerModel {
+export default interface ITimePickerModel {
     collapse: boolean;
     enable: boolean;
     notice?: boolean;

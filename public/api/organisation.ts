@@ -1,6 +1,6 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IOrganisationModel from './models/organisationModel';
-import IUserModel from './models/userModel';
+import IOrganisationModel from './models/organisation/organisationModel';
+import IUserModel from './models/user/userModel';
 
 export default class Organisation extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: string) {

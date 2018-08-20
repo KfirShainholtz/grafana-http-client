@@ -1,6 +1,5 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
 import IAnnotationsQueryModel from './models/annotations/annotationsQueryModel';
-import IAlertNotificationModel from './models/alertNotificationModel';
 import UrlParsing, { UrlParseMethod } from './utils/url-parsing';
 import IAnnotationModel from './models/annotations/annotationModel';
 import IGraphiteAnnotationModel from './models/annotations/graphiteAnnotationModel';

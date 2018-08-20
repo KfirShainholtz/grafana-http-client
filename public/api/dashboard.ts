@@ -1,7 +1,6 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IDashboardModel from './models/dashboard/dashboardModel';
 import ICreateOrUpdateDashboardModel from './models/dashboard/createOrUpdateDashboardModel';
-import IFolderOrQuerySearchModel from './models/folderQueryModel';
+import IFolderOrQuerySearchModel from './models/folder-query/folderQueryModel';
 import UrlParsing from './utils/url-parsing';
 /**
  * The deprecated requests are going to be removed, so they won't be expressed here as well.

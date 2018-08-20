@@ -1,5 +1,5 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IPermissionModel from './models/permissionsModel';
+import IPermissionModel from './models/permissions/permissionsModel';
 
 export default class DashboardPermissions extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: string) {

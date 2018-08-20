@@ -1,6 +1,6 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IUserModel from './models/userModel';
-import IChangePasswordModel from './models/changePasswordModel';
+import IUserModel from './models/user/userModel';
+import IChangePasswordModel from './models/password/changePasswordModel';
 
 /**
  * The users http api works with a supplied auth key, for each initiation.

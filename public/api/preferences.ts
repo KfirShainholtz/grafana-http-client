@@ -1,5 +1,5 @@
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IPreferencesModel from './models/preferencesModel';
+import IPreferencesModel from './models/preferences/preferencesModel';
 
 export default class Preferences extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: string) {
