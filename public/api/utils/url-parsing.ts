@@ -1,3 +1,7 @@
+export enum UrlParseMethod {
+    Default = 'default', DuplicateArrayEntries = 'duplicatedArrayEntries',
+}
+
 class UrlParsing {
     parseMethodMap: Map<string, (pair: any) => string>;
 
@@ -30,7 +34,3 @@ class UrlParsing {
 }
 
 export default new UrlParsing();
-
-export enum UrlParseMethod {
-    Default = 'default', DuplicateArrayEntries = 'duplicatedArrayEntries',
-}

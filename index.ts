@@ -6,6 +6,7 @@ import Authentication from './public/api/authentication';
 import DashboardPermissions from './public/api/dashboard-permissions';
 import DashboardVersions from './public/api/dashboard-versions';
 import Dashboard from './public/api/dashboard';
+import Datasource from './public/api/datasource';
 import FolderPermissions from './public/api/folder-permissions';
 import Misc from './public/api/other';
 import Organisation from './public/api/organisation';
@@ -23,6 +24,7 @@ export {
     DashboardPermissions,
     DashboardVersions,
     Dashboard,
+    Datasource,
     FolderPermissions,
     Misc,
     Organisation,

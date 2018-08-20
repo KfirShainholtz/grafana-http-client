@@ -6,6 +6,7 @@ import Authentication from '../../public/api/authentication';
 import DashboardPermissions from '../../public/api/dashboard-permissions';
 import DashboardVersions from '../../public/api/dashboard-versions';
 import Dashboard from '../../public/api/dashboard';
+import Datasource from '../../public/api/datasource';
 import FolderPermissions from '../../public/api/folder-permissions';
 import Misc from '../../public/api/other';
 import Organisation from '../../public/api/organisation';
@@ -23,6 +24,7 @@ export default class GrafanaClient extends GrafanaHTTPApi{
     public dashboardPermissions: DashboardPermissions;
     public dashboardVersions: DashboardVersions;
     public dashboard: Dashboard;
+    public datasource: Datasource;
     public folderPermissions: FolderPermissions;
     public misc: Misc;
     public organisation: Organisation;
@@ -41,6 +43,7 @@ export default class GrafanaClient extends GrafanaHTTPApi{
         this.dashboardPermissions = new DashboardPermissions(baseURL, authKey);
         this.dashboardVersions = new DashboardVersions(baseURL, authKey);
         this.dashboard = new Dashboard(baseURL, authKey);
+        this.datasource = new Datasource(baseURL, authKey);
         this.folderPermissions = new FolderPermissions(baseURL, authKey);
         this.misc = new Misc(baseURL, authKey);
         this.organisation = new Organisation(baseURL, authKey);
