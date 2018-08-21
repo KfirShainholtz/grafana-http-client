@@ -58,6 +58,10 @@ export default class Users extends GrafanaHTTPApi {
         return this.httpClient.put(`/api/user/password`, changePasswordObj);
     }
 
+    switchSignedInUserContext(organisationId: number) {
+        return this.httpClient.post(`/api/user/using/${organisationId}`);
+    }
+
     switchUserContext(userId: number, organisationId: number) {
         // TODO: requires basic authentication
         return this.httpClient.post(`/api/users/${userId}/using/${organisationId}`);
