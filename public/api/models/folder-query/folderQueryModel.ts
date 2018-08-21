@@ -1,6 +1,4 @@
-export enum FolderOrQuerySearchType {
-    DashFolder = 'dash-folder', DashDB = 'dash-db',
-}
+import { FolderOrQuerySearchType } from './folderQueryModelTypes';
 
 export default interface IFolderOrQuerySearchModel {
     query: string;

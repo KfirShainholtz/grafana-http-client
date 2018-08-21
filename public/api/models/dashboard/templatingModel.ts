@@ -1,3 +1,5 @@
+import { TemplatingType } from './dashboardTypes';
+
 export default interface ITemplatingModel {
     enable: boolean;
     list: {}[];
@@ -13,10 +15,6 @@ export default interface ITemplatingModel {
     refresh: undefined;
     regex: undefined;
     type: TemplatingType;
-}
-
-export enum TemplatingType {
-    Custom = 'custom', Query = 'query', Interval = 'interval',
 }
 
 interface ITextValuePair {

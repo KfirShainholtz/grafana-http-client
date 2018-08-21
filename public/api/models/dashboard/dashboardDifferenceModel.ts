@@ -1,6 +1,4 @@
-export enum DiffType {
-    JSON = 'json', Basic = 'basic',
-}
+import { DiffType } from './dashboardTypes';
 
 export default interface IDashboardDifferenceModel {
     base: IDifferenceComparableDashboardModel;

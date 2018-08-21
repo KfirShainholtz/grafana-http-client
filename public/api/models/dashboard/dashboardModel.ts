@@ -1,4 +1,4 @@
-import { Timezone, Theme, GraphToolTips } from '../preferences/preferencesModel';
+import { Timezone, Theme, GraphToolTips } from '../preferences/preferencesModelTypes';
 import ITimePickerModel from './timepickerModel';
 import ITemplatingModel from './templatingModel';
 import IPanelModel from './panelModel';
