@@ -1,4 +1,4 @@
-import Theme from '../preferences/preferencesModel';
+import { Theme } from '../preferences/preferencesModelTypes';
 
 export default interface IUserModel {
     email: string;
