@@ -1,4 +1,4 @@
-import { DiffType } from './dashboardTypes';
+import { DiffType } from './dashboardModelTypes';
 
 export default interface IDashboardDifferenceModel {
     base: IDifferenceComparableDashboardModel;

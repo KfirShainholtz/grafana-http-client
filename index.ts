@@ -24,9 +24,10 @@ import ICreateOrUpdateDashboardModel from './public/api/models/dashboard/createO
 import IDashboardDifferencesModel from './public/api/models/dashboard/dashboardDifferenceModel';
 import IDashboardMetaModel from './public/api/models/dashboard/dashboardMetaModel';
 import IDashboardModel from './public/api/models/dashboard/dashboardModel';
+import { TemplatingType, DiffType } from './public/api/models/dashboard/dashboardModelTypes';
 import IDashboardRestoreModel from './public/api/models/dashboard/dashboardRestoreModel';
-// tslint:disable-next-line:max-line-length
-import IFolderPermissionsModel, { IFolderPermissionModel, PermissionRole, ClientRole } from './public/api/models/permissions/permissionsModel';
+import IFolderPermissionsModel, { IFolderPermissionModel } from './public/api/models/permissions/permissionsModel';
+import { PermissionRole, ClientRole } from './public/api/models/permissions/permissionsModelTypes';
 import IPanelModel from './public/api/models/dashboard/panelModel';
 import ITemplatingModel from './public/api/models/dashboard/templatingModel';
 import ITimePickerModel from './public/api/models/dashboard/timepickerModel';
@@ -39,7 +40,8 @@ import ITeamQueryModel from './public/api/models/team/teamQueryModel';
 import IAlertNotificationModel from './public/api/models/alert/alertNotificationModel';
 import IAlertQueryModel from './public/api/models/alert/alertQueryModel';
 import IUserModel from './public/api/models/user/userModel';
-import IPreferencesModel, { Theme, GraphToolTips, Timezone } from './public/api/models/preferences/preferencesModel';
+import IPreferencesModel from './public/api/models/preferences/preferencesModel';
+import { Theme, GraphToolTips, Timezone } from './public/api/models/preferences/preferencesModelTypes';
 import IChangePasswordModel from './public/api/models/password/changePasswordModel';
 
 import GrafanaClient from './public/client/grafana-client';
@@ -65,7 +67,7 @@ export {
 
 // Models
 export {
-    Theme, GraphToolTips, Timezone, PermissionRole, ClientRole,
+    Theme, GraphToolTips, Timezone, PermissionRole, ClientRole, TemplatingType, DiffType,
     IAdminChangePasswordModel,
     IAdminPermissionsModel,
     IAnnotationsModel,

@@ -1,4 +1,4 @@
-import { TemplatingType } from './dashboardTypes';
+import { TemplatingType } from './dashboardModelTypes';
 
 export default interface ITemplatingModel {
     enable: boolean;
