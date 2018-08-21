@@ -13,6 +13,9 @@
     "sdk",
     "api"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "Kfir Shainholtz",
   "license": "ISC",
   "dependencies": {
@@ -25,13 +28,15 @@
     "@types/chai": "^4.1.4",
     "@types/lodash": "^4.14.116",
     "@types/mocha": "^5.2.5",
+    "@types/sinon": "^5.0.1",
     "chai": "^4.1.2",
     "eslint": "^5.4.0",
     "mocha": "^5.2.0",
+    "sinon": "^6.1.5",
     "ts-node": "^7.0.1",
-    "ts-sinon": "^1.0.12",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.10.0",
+    "tslint-config-security": "^1.4.0",
     "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.0.1"
   }

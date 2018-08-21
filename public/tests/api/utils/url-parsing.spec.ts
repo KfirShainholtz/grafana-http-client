@@ -1,14 +1,9 @@
 import UrlParsing, { UrlParseMethod } from '../../../api/utils/url-parsing';
 import { expect } from 'chai';
-import * as sinon from 'ts-sinon';
+import * as sinon from 'sinon';
 
 describe('Url parsing spec', () => {
     describe('Default url params parsing', () => {
-        it('should use the default parsing method when no other provided', () => {
-            const result = UrlParsing.parseUrlParams({});
-
-        });
-
         it('should return an empty string when no urlParams provided', () => {
             const result = UrlParsing.parseUrlParams({});
             expect(result).to.equal('');

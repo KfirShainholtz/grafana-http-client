@@ -20,11 +20,11 @@ class UrlParsing {
         return '';
     }
 
-    private defaultParse(pair: [any, any]) : string {
+    public defaultParse(pair: [any, any]) : string {
         return pair.join('=');
     }
 
-    private duplicateArrayEntriesParse(pair: [any, any]) : string {
+    public duplicateArrayEntriesParse(pair: [any, any]) : string {
         const arr = pair[1];
         if (Array.isArray(arr)) {
             return arr.map(p => this.defaultParse([pair[0], p])).join('&');
