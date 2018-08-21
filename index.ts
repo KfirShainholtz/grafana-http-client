@@ -32,6 +32,7 @@ import IPanelModel from './public/api/models/dashboard/panelModel';
 import ITemplatingModel from './public/api/models/dashboard/templatingModel';
 import ITimePickerModel from './public/api/models/dashboard/timepickerModel';
 import IDatasourceModel from './public/api/models/datasource/datasourceModel';
+import IOrganisationModel from './public/api/models/organisation/organisationModel';
 import ISnapshotModel from './public/api/models/snapshot/snapshotModel';
 import ISnapshotQueryModel from './public/api/models/snapshot/snapshotQueryModel';
 import ITeamMemberModel from './public/api/models/team/teamMemberModel';
@@ -85,6 +86,7 @@ export {
     IFolderPermissionModel,
     IFolderPermissionsModel,
     IDatasourceModel,
+    IOrganisationModel,
     ISnapshotModel,
     ISnapshotQueryModel,
     ITeamMemberModel,
