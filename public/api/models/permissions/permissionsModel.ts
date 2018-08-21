@@ -6,11 +6,11 @@ export enum ClientRole {
     Viewer = 'Viewer', Editor = 'Editor', Admin = 'Admin',
 }
 
-interface IFolderPermission {
+export interface IFolderPermissionModel {
     role: ClientRole;
     permission: PermissionRole;
 }
 
 export default interface IFolderPermissionsModel {
-    items: IFolderPermission[];
+    items: IFolderPermissionModel[];
 }

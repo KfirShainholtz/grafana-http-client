@@ -18,13 +18,15 @@ import IAdminChangePasswordModel from './public/api/models/admin/adminChangePass
 import IAdminPermissionsModel from './public/api/models/admin/adminPermissionsModel';
 import IAnnotationsModel from './public/api/models/annotations/annotationModel';
 import IAnnotationsQueryModel from './public/api/models/annotations/annotationsQueryModel';
-import IGraphiteAnnotationsModel from './public/api/models/annotations/graphiteAnnotationModel';
 import IAuthenticationModel from './public/api/models/authentication/authenticationModel';
+import IGraphiteAnnotationsModel from './public/api/models/annotations/graphiteAnnotationModel';
 import ICreateOrUpdateDashboardModel from './public/api/models/dashboard/createOrUpdateDashboardModel';
 import IDashboardDifferencesModel from './public/api/models/dashboard/dashboardDifferenceModel';
 import IDashboardMetaModel from './public/api/models/dashboard/dashboardMetaModel';
 import IDashboardModel from './public/api/models/dashboard/dashboardModel';
 import IDashboardRestoreModel from './public/api/models/dashboard/dashboardRestoreModel';
+// tslint:disable-next-line:max-line-length
+import IFolderPermissionsModel, { IFolderPermissionModel, PermissionRole, ClientRole } from './public/api/models/permissions/permissionsModel';
 import IPanelModel from './public/api/models/dashboard/panelModel';
 import ITemplatingModel from './public/api/models/dashboard/templatingModel';
 import ITimePickerModel from './public/api/models/dashboard/timepickerModel';
@@ -37,7 +39,7 @@ import ITeamQueryModel from './public/api/models/team/teamQueryModel';
 import IAlertNotificationModel from './public/api/models/alert/alertNotificationModel';
 import IAlertQueryModel from './public/api/models/alert/alertQueryModel';
 import IUserModel from './public/api/models/user/userModel';
-import IPreferencesModel from './public/api/models/preferences/preferencesModel';
+import IPreferencesModel, { Theme, GraphToolTips, Timezone } from './public/api/models/preferences/preferencesModel';
 import IChangePasswordModel from './public/api/models/password/changePasswordModel';
 
 import GrafanaClient from './public/client/grafana-client';
@@ -63,6 +65,7 @@ export {
 
 // Models
 export {
+    Theme, GraphToolTips, Timezone, PermissionRole, ClientRole,
     IAdminChangePasswordModel,
     IAdminPermissionsModel,
     IAnnotationsModel,
@@ -77,6 +80,8 @@ export {
     IPanelModel,
     ITemplatingModel,
     ITimePickerModel,
+    IFolderPermissionModel,
+    IFolderPermissionsModel,
     IDatasourceModel,
     ISnapshotModel,
     ISnapshotQueryModel,
