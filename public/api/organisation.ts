@@ -1,9 +1,11 @@
+import IApiBearerAuth from '../client/authentication/api-bearer-auth';
+import IBasicAuth from '../client/authentication/basic-auth';
 import GrafanaHTTPApi from '../client/grafana-http-api';
 import IOrganisationModel from './models/organisation/organisationModel';
 import IUserModel from './models/user/userModel';
 
 export default class Organisation extends GrafanaHTTPApi {
-    constructor(baseURL?: string, authKey?: string) {
+    constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
         super(baseURL);
     }

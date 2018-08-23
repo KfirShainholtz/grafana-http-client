@@ -1,15 +1,17 @@
+import IApiBearerAuth from '../client/authentication/api-bearer-auth';
+import IBasicAuth from '../client/authentication/basic-auth';
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IUserModel from './models/user/userModel';
 import IChangePasswordModel from './models/password/changePasswordModel';
+import IUserModel from './models/user/userModel';
 
 /**
  * The users http api works with a supplied auth key, for each initiation.
  * Visit http://docs.grafana.org/http_api/user/ for documentation about each request.
  */
 export default class Users extends GrafanaHTTPApi {
-    constructor(baseURL?: string, authKey?: string) {
+    constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
     searchUsers(perPage: number = 1000, page: number = 1): Promise<any> {

@@ -1,14 +1,15 @@
+import IApiBearerAuth from '../client/authentication/api-bearer-auth';
+import IBasicAuth from '../client/authentication/basic-auth';
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import UrlParsing from './utils/url-parsing';
-
+import ITeamMemberModel from './models/team/teamMemberModel';
 import ITeamModel from './models/team/teamModel';
 import TeamQueryModel from './models/team/teamQueryModel';
-import ITeamMemberModel from './models/team/teamMemberModel';
+import UrlParsing from './utils/url-parsing';
 
 export default class Teams extends GrafanaHTTPApi {
-    constructor(baseURL?: string, authKey?: string) {
+    constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
     searchTeamWithPaging(teamQuery: TeamQueryModel) {

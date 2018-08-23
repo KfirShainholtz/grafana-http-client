@@ -1,7 +1,10 @@
+import { AxiosPromise } from 'axios';
+import IApiBearerAuth from '../client/authentication/api-bearer-auth';
+import IBasicAuth from '../client/authentication/basic-auth';
 import GrafanaHTTPApi from '../client/grafana-http-api';
-import IUserModel from './models/user/userModel';
 import IAdminChangePasswordModel from './models/admin/adminChangePasswordModel';
 import IAdminPermissionsModel from './models/admin/adminPermissionsModel';
+import IUserModel from './models/user/userModel';
 
 /**
  The Admin HTTP API does not currently work with an API Token.
@@ -12,13 +15,13 @@ import IAdminPermissionsModel from './models/admin/adminPermissionsModel';
  Visit http://docs.grafana.org/http_api/admin/#admin-api for more
  */
 export default class Admin extends GrafanaHTTPApi {
-    constructor(baseURL?: string, authKey?: string) {
+    constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
-    getSettings(): Promise<any> {
-        return this.httpClient.get(`/api/admin/settings`);
+    getSettings(): AxiosPromise<string> {
+        return this.httpClient.get<string>(`/api/admin/settings`);
     }
 
     createNewUser(user: IUserModel): Promise<any> {

@@ -7,9 +7,9 @@ import UrlParsing from './utils/url-parsing';
 import IDashboardRestoreModel from './models/dashboard/dashboardRestoreModel';
 
 export default class DashboardVersions extends GrafanaHTTPApi {
-    constructor(baseURL?: string, authKey?: string) {
+    constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
     getAllDashboardVersions(dashboardId: number, start: Partial<IDashboardVersionsModel> = {}) {

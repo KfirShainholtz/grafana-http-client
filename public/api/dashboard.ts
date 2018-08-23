@@ -2,14 +2,16 @@ import GrafanaHTTPApi from '../client/grafana-http-api';
 import ICreateOrUpdateDashboardModel from './models/dashboard/createOrUpdateDashboardModel';
 import IFolderOrQuerySearchModel from './models/folder-query/folderQueryModel';
 import UrlParsing from './utils/url-parsing';
+import IApiBearerAuth from '../client/authentication/api-bearer-auth';
+import IBasicAuth from '../client/authentication/basic-auth';
 /**
  * The deprecated requests are going to be removed, so they won't be expressed here as well.
  * See more http://docs.grafana.org/http_api/dashboard/
  */
 export default class Dashboard extends GrafanaHTTPApi {
-    constructor(baseURL?: string, authKey?: string) {
+    constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
     /**

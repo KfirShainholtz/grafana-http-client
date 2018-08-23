@@ -4,9 +4,9 @@ import IAlertNotificationModel from './models/alert/alertNotificationModel';
 import UrlParsing from './utils/url-parsing';
 
 export default class Alerting extends GrafanaHTTPApi {
-    constructor(baseURL?: string, authKey?: string) {
+    constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
     getAlerts(alertsQuery: IAlertQueryModel) {

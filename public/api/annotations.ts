@@ -3,11 +3,13 @@ import IAnnotationsQueryModel from './models/annotations/annotationsQueryModel';
 import UrlParsing, { UrlParseMethod } from './utils/url-parsing';
 import IAnnotationModel from './models/annotations/annotationModel';
 import IGraphiteAnnotationModel from './models/annotations/graphiteAnnotationModel';
+import IApiBearerAuth from '../client/authentication/api-bearer-auth';
+import IBasicAuth from '../client/authentication/basic-auth';
 
 export default class Annotations extends GrafanaHTTPApi {
-    constructor(baseURL?: string, authKey?: string) {
+    constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
     findAnnotations(annotationsSearch: Partial<IAnnotationsQueryModel>) {
