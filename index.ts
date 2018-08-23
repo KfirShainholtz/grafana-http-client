@@ -19,6 +19,7 @@ import IAdminPermissionsModel from './public/api/models/admin/adminPermissionsMo
 import IAnnotationsModel from './public/api/models/annotations/annotationModel';
 import IAnnotationsQueryModel from './public/api/models/annotations/annotationsQueryModel';
 import IAuthenticationModel from './public/api/models/authentication/authenticationModel';
+
 import IGraphiteAnnotationsModel from './public/api/models/annotations/graphiteAnnotationModel';
 import ICreateOrUpdateDashboardModel from './public/api/models/dashboard/createOrUpdateDashboardModel';
 import IDashboardDifferencesModel from './public/api/models/dashboard/dashboardDifferenceModel';
@@ -46,6 +47,8 @@ import { Theme, GraphToolTips, Timezone } from './public/api/models/preferences/
 import IChangePasswordModel from './public/api/models/password/changePasswordModel';
 
 import GrafanaClient from './public/client/grafana-client';
+import IApiBearerAuth from './public/client/authentication/api-bearer-auth';
+import IBasicAuth from './public/client/authentication/basic-auth';
 
 // API
 export {
@@ -65,6 +68,11 @@ export {
     Snapshot,
     Teams,
 };
+
+// client models
+export {
+    IBasicAuth, IApiBearerAuth,
+}
 
 // Models
 export {

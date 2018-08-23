@@ -20,8 +20,8 @@ export default class Admin extends GrafanaHTTPApi {
         super(baseURL, authKey, basicAuth);
     }
 
-    getSettings(): AxiosPromise<string> {
-        return this.httpClient.get<string>(`/api/admin/settings`);
+    getSettings() {
+        return this.httpClient.get(`/api/admin/settings`);
     }
 
     createNewUser(user: IUserModel): Promise<any> {

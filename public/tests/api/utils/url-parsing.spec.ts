@@ -1,6 +1,5 @@
-import UrlParsing, { UrlParseMethod } from '../../../api/utils/url-parsing';
 import { expect } from 'chai';
-import * as sinon from 'sinon';
+import UrlParsing, { UrlParseMethod } from '../../../api/utils/url-parsing';
 
 describe('Url parsing spec', () => {
     describe('Default url params parsing', () => {
