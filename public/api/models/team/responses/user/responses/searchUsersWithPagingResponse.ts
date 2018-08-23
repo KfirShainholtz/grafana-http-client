@@ -1,8 +1,8 @@
-import { ISearchUser } from './searchUser';
+import { ISearchUserModel } from '../../../../user/searchUserModel';
 
 export default interface ISearchUserWithPagingResponse {
     totalCount: number;
-    users: ISearchUser[];
+    users: ISearchUserModel[];
     page: number;
     perPage: number;
 }

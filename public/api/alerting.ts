@@ -2,6 +2,8 @@ import GrafanaHTTPApi from '../client/grafana-http-api';
 import IAlertQueryModel from './models/alert/alertQueryModel';
 import IAlertNotificationModel from './models/alert/alertNotificationModel';
 import UrlParsing from './utils/url-parsing';
+import IApiBearerAuth from '../client/authentication/api-bearer-auth';
+import IBasicAuth from '../client/authentication/basic-auth';
 
 export default class Alerting extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {

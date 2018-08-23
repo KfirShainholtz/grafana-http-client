@@ -44,16 +44,9 @@ export default class Users extends GrafanaHTTPApi {
      * @param authorizationKey An optional key to use for retrieving other users
      * besides the current (if any key supplied when initiating the class)
      */
-    getActualUser(authorizationKey?: string) {
-        const key = authorizationKey || this.authorizationKey;
-        if (!key) throw new Error(`An authorization key must exist`);
-
+    getActualUser() {
         // TODO: maybe remove it, and use the saved authorization key supplied first when initiating the class itself.
-        return this.httpClient.get(`/api/user`, {
-            headers: {
-                Authorization: key,
-            },
-        });
+        return this.httpClient.get(`/api/user`);
     }
 
     changePassword(changePasswordObj: IChangePasswordModel) {

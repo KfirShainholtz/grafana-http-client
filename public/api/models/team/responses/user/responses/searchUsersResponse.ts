@@ -1,5 +1,5 @@
-import { ISearchUser } from './searchUser';
+import { ISearchUserModel } from '../../../../user/searchUserModel';
 
 export default interface ISearchUsersResponse {
-    data: ISearchUser[];
+    data: ISearchUserModel[];
 }

@@ -5,6 +5,8 @@ import IDashboardDifferenceModel from './models/dashboard/dashboardDifferenceMod
 
 import UrlParsing from './utils/url-parsing';
 import IDashboardRestoreModel from './models/dashboard/dashboardRestoreModel';
+import IApiBearerAuth from '../client/authentication/api-bearer-auth';
+import IBasicAuth from '../client/authentication/basic-auth';
 
 export default class DashboardVersions extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
