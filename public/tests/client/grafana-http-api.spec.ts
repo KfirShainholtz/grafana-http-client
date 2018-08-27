@@ -15,25 +15,33 @@ describe('Grafana http api spec', () => {
             moxios.uninstall();
         });
 
+        const btoa = (str: string) => {
+            let buffer;
+            buffer = Buffer.from(str.toString(), 'binary');
+            return buffer.toString('base64');
+        };
+
         it('should use a basic auth authorization header when basicAuth key provided', (done) => {
-            const basicAuth: IBasicAuth = {
+            const login: IBasicAuth = {
                 username: 'hello',
                 password: 'hello',
             };
 
+            // evaluates to 'Basic aGVsbG86aGVsbG8=', the actual basic auth. it's fun to learn!
+            const basicAuth = `Basic ${btoa(login.username + ':' + login.password)}`;
+
             moxios.stubRequest('/api/admin/settings', {
                 status: 200,
-                responseText: 'hello'
-              });
+                responseText: 'hello',
+            });
 
-            const adminApi: Admin = new Admin('http://www.this.is.fake:1337', undefined, basicAuth);
+            const adminApi: Admin = new Admin('http://www.this.is.fake:1337', undefined, login);
 
             // initiate a valid axios request
             adminApi.getSettings();
-            
             moxios.wait(() => {
                 const request = moxios.requests.mostRecent();
-                expect(request.headers!.Authorization!).to.equal('Basic aGVsbG86aGVsbG8=');
+                expect(request.headers!.Authorization!).to.equal(basicAuth);
                 done();
             }, 200);
         });
@@ -45,14 +53,13 @@ describe('Grafana http api spec', () => {
 
             moxios.stubRequest('/api/admin/settings', {
                 status: 200,
-                responseText: 'hello'
-              });
+                responseText: 'hello',
+            });
 
             const adminApi: Admin = new Admin('http://www.this.is.fake:1337', apiBearerAuth);
 
             // initiate a valid axios request
             adminApi.getSettings();
-            
             moxios.wait(() => {
                 const request = moxios.requests.mostRecent();
                 expect(request.headers!.Authorization!).to.equal('Bearer 1337=');
