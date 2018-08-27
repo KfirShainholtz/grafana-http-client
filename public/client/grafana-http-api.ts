@@ -5,7 +5,7 @@ import IBasicAuth from './authentication/basic-auth';
 export default class GrafanaHTTPApi {
     protected httpClient: AxiosInstance;
 
-    constructor(baseURL?: string, authKey? :IApiBearerAuth, basicAuth?: IBasicAuth) { 
+    constructor(baseURL?: string, authKey? :IApiBearerAuth, basicAuth?: IBasicAuth) {
         // todo: remove any, make default constructors
         // TODO: maybe create another http client that will use the admin@admin
         // TODO: maybe add the example request + response for each API

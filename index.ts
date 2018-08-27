@@ -72,7 +72,7 @@ export {
 // client models
 export {
     IBasicAuth, IApiBearerAuth,
-}
+};
 
 // Models
 export {
