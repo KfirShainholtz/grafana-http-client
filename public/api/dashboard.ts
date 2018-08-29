@@ -18,29 +18,29 @@ export default class Dashboard extends GrafanaHTTPApi {
      * Frontend Settings API
      */
     createOrUpdateDashboard(createOrUpdateDashboard: ICreateOrUpdateDashboardModel) {
-        return this.httpClient.post(`/api/dashboards/db`, createOrUpdateDashboard);
+        return this.bearerHttpClient.post(`/api/dashboards/db`, createOrUpdateDashboard);
     }
 
     getDashboardByUid(uid: number) {
-        return this.httpClient.get(`/api/dashboards/uid/${uid}`);
+        return this.bearerHttpClient.get(`/api/dashboards/uid/${uid}`);
     }
 
     deleteDashboardByUid(uid: number) {
-        return this.httpClient.delete(`/api/dashboards/uid/${uid}`);
+        return this.bearerHttpClient.delete(`/api/dashboards/uid/${uid}`);
     }
 
     getHomeDashboard() {
-        return this.httpClient.get(`/api/dashboards/home`);
+        return this.bearerHttpClient.get(`/api/dashboards/home`);
     }
 
     /**
      * Plural!
      */
     getDashboardsTags() {
-        return this.httpClient.get(`/api/dashboards/tags`);
+        return this.bearerHttpClient.get(`/api/dashboards/tags`);
     }
 
     searchDashboard(query: IFolderOrQuerySearchModel) {
-        return this.httpClient.get(`/api/search?${UrlParsing.parseUrlParams(query)}`);
+        return this.bearerHttpClient.get(`/api/search?${UrlParsing.parseUrlParams(query)}`);
     }
 }

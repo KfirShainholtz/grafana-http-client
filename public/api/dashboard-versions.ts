@@ -15,18 +15,19 @@ export default class DashboardVersions extends GrafanaHTTPApi {
     }
 
     getAllDashboardVersions(dashboardId: number, start: Partial<IDashboardVersionsModel> = {}) {
-        return this.httpClient.get(`/api/dashboards/id/${dashboardId}/versions${UrlParsing.parseUrlParams(start)}`);
+        return this.bearerHttpClient
+            .get(`/api/dashboards/id/${dashboardId}/versions${UrlParsing.parseUrlParams(start)}`);
     }
 
     getDashboardVersion(dashboardId: number, id: number) { // wtf?
-        return this.httpClient.get(`/api/dashboards/id/${dashboardId}/versions/${id}`);
+        return this.bearerHttpClient.get(`/api/dashboards/id/${dashboardId}/versions/${id}`);
     }
 
     restoreDashboard(dashboardId: number, dashboardVersion: IDashboardRestoreModel) {
-        return this.httpClient.post(`/api/dashboards/id/${dashboardId}/restore`);
+        return this.bearerHttpClient.post(`/api/dashboards/id/${dashboardId}/restore`);
     }
 
     compareDashboardVersions(dashboardDiff: IDashboardDifferenceModel) {
-        return this.httpClient.post(`/api/dashboards/calculate-diff`, dashboardDiff);
+        return this.bearerHttpClient.post(`/api/dashboards/calculate-diff`, dashboardDiff);
     }
 }

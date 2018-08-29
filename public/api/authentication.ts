@@ -10,14 +10,14 @@ export default class Authentication extends GrafanaHTTPApi {
     }
 
     getApiKeys() {
-        return this.httpClient.get(`/api/auth/keys`);
+        return this.bearerHttpClient.get(`/api/auth/keys`);
     }
 
     createApiKey(authentication: IAuthenticationModel) {
-        return this.httpClient.post(`/api/auth/keys`, authentication);
+        return this.bearerHttpClient.post(`/api/auth/keys`, authentication);
     }
 
     deleteApiKey(id: number) {
-        return this.httpClient.delete(`/api/auth/keys/${id}`);
+        return this.bearerHttpClient.delete(`/api/auth/keys/${id}`);
     }
 }

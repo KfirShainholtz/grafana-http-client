@@ -21,27 +21,27 @@ export default class Admin extends GrafanaHTTPApi {
     }
 
     getSettings() {
-        return this.httpClient.get(`/api/admin/settings`);
+        return this.basicHttpClient.get(`/api/admin/settings`);
     }
 
     createNewUser(user: IUserModel): Promise<any> {
-        return this.httpClient.post(`/api/admin/users`, user);
+        return this.basicHttpClient.post(`/api/admin/users`, user);
     }
 
     changeGlobalUserPassword(userId: number, password: IAdminChangePasswordModel) : Promise<any> {
         // TODO: maybe use partial<IChangePasswordModel>?
-        return this.httpClient.put(`/api/admin/users/${userId}/password`, password);
+        return this.basicHttpClient.put(`/api/admin/users/${userId}/password`, password);
     }
 
     updateGlobalUserPermissions(userId: number, permissions: IAdminPermissionsModel) {
-        return this.httpClient.put(`/api/admin/users/${userId}/permissions`, permissions);
+        return this.basicHttpClient.put(`/api/admin/users/${userId}/permissions`, permissions);
     }
 
     deleteGlobalUser(userId: number) {
-        return this.httpClient.delete(`/api/admin/users/${userId}`);
+        return this.basicHttpClient.delete(`/api/admin/users/${userId}`);
     }
 
     pauseAllAlerts() {
-        return this.httpClient.post(`/api/admin/pause-all-alerts`);
+        return this.basicHttpClient.post(`/api/admin/pause-all-alerts`);
     }
 }

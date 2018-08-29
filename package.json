@@ -17,6 +17,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KfirShainholtz/grafana-http-client"
+  },
   "author": "Kfir Shainholtz",
   "license": "ISC",
   "dependencies": {

@@ -11,36 +11,36 @@ export default class Alerting extends GrafanaHTTPApi {
         super(baseURL, authKey, basicAuth);
     }
 
-    getAlerts(alertsQuery: IAlertQueryModel) {
-        return this.httpClient.get(`/api/alerts${UrlParsing.parseUrlParams(alertsQuery)}`);
+    getAlerts(alertsQuery: Partial<IAlertQueryModel>) {
+        return this.bearerHttpClient.get(`/api/alerts${UrlParsing.parseUrlParams(alertsQuery)}`);
     }
 
     getAlert(id: number) {
-        return this.httpClient.get(`/api/alerts/${id}`);
+        return this.bearerHttpClient.get(`/api/alerts/${id}`);
     }
 
     pauseAlert(id: number) {
-        return this.httpClient.post(`/api/alerts/${id}/pause`);
+        return this.bearerHttpClient.post(`/api/alerts/${id}/pause`);
     }
 
     pauseAllAlerts() {
         // Admin api!
-        return this.httpClient.post(`/api/admin/pause-all-alerts`);
+        return this.bearerHttpClient.post(`/api/admin/pause-all-alerts`);
     }
 
     getAlertNotifications() {
-        return this.httpClient.get(`/api/alert-notifications`);
+        return this.bearerHttpClient.get(`/api/alert-notifications`);
     }
 
     createAlertNotification(alertNotification: IAlertNotificationModel) {
-        return this.httpClient.post(`/api/alert-notifications`, alertNotification);
+        return this.bearerHttpClient.post(`/api/alert-notifications`, alertNotification);
     }
 
     updateAlertNotification(id: number, alertNotification: IAlertNotificationModel) {
-        return this.httpClient.put(`/api/alert-notifications/${id}`, alertNotification);
+        return this.bearerHttpClient.put(`/api/alert-notifications/${id}`, alertNotification);
     }
 
     deleteAlertNotification(id: number) {
-        return this.httpClient.delete(`/api/alert-notifications/${id}`);
+        return this.bearerHttpClient.delete(`/api/alert-notifications/${id}`);
     }
 }

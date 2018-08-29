@@ -9,10 +9,10 @@ export default class DashboardPermissions extends GrafanaHTTPApi {
     }
 
     getDashboardPermissions(dashboardId: number) {
-        return this.httpClient.get(`/api/dashboards/id/${dashboardId}/permissions`);
+        return this.bearerHttpClient.get(`/api/dashboards/id/${dashboardId}/permissions`);
     }
 
     updateDashboardPermissions(dashboardId: number, permissions: IPermissionModel) {
-        return this.httpClient.post(`/api/dashboards/id/${dashboardId}/permissions`, permissions);
+        return this.bearerHttpClient.post(`/api/dashboards/id/${dashboardId}/permissions`, permissions);
     }
 }

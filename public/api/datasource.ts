@@ -10,38 +10,38 @@ export default class Datasource extends GrafanaHTTPApi {
     }
 
     getAllDatasources() {
-        return this.httpClient.get(`/api/datasources`);
+        return this.bearerHttpClient.get(`/api/datasources`);
     }
 
     getDatasourceById(datasourceId: number | string) {
-        return this.httpClient.get(`/api/datasources/${datasourceId}`);
+        return this.bearerHttpClient.get(`/api/datasources/${datasourceId}`);
     }
 
     getDatasourceByName(name: string) {
-        return this.httpClient.get(`/api/datasources/name/${name}`);
+        return this.bearerHttpClient.get(`/api/datasources/name/${name}`);
     }
 
     getDatasourceIdByName(name: string) {
-        return this.httpClient.get(`/api/datasources/id/${name}`);
+        return this.bearerHttpClient.get(`/api/datasources/id/${name}`);
     }
 
     createDatasource(datasource: IDatasourceModel | any) { // todo: figure out actual model
-        return this.httpClient.post(`/api/datasources`, datasource);
+        return this.bearerHttpClient.post(`/api/datasources`, datasource);
     }
 
     updateDatasource(datasourceId: number | string, datasource: IDatasourceModel | any) {
-        return this.httpClient.put(`/api/datasources/${datasourceId}`, datasource);
+        return this.bearerHttpClient.put(`/api/datasources/${datasourceId}`, datasource);
     }
 
     deleteDatasourceById(datasourceId: number | string) {
-        return this.httpClient.delete(`/api/datasources/${datasourceId}`);
+        return this.bearerHttpClient.delete(`/api/datasources/${datasourceId}`);
     }
 
     deleteDatasourceByName(datasourceName: string) {
-        return this.httpClient.delete(`/api/datasources/name/${datasourceName}`);
+        return this.bearerHttpClient.delete(`/api/datasources/name/${datasourceName}`);
     }
 
     datasourceProxyCalls(datasourceId: number | string) {
-        return this.httpClient.get(`/api/datasources/proxy/${datasourceId}`);
+        return this.bearerHttpClient.get(`/api/datasources/proxy/${datasourceId}`);
     }
 }

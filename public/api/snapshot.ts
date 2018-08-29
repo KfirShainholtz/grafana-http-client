@@ -12,18 +12,18 @@ export default class Snapshot extends GrafanaHTTPApi {
     }
 
     createNewSnapshot(snapshot: ISnapshotModel) {
-        return this.httpClient.post(`/api/snapshots`, snapshot);
+        return this.bearerHttpClient.post(`/api/snapshots`, snapshot);
     }
 
     getSnapshots(snapshotQuery: ISnapshotQueryModel) {
-        return this.httpClient.get(`/api/snapshots${UrlParsing.parseUrlParams(snapshotQuery)}`);
+        return this.bearerHttpClient.get(`/api/snapshots${UrlParsing.parseUrlParams(snapshotQuery)}`);
     }
 
     getSnapshotByKey(key: number | string) {
-        return this.httpClient.get(`/api/snapshot/${key}`);
+        return this.bearerHttpClient.get(`/api/snapshot/${key}`);
     }
 
     deleteSnapshotByDeleteKey(deleteKey: number | string) {
-        return this.httpClient.delete(`/api/snapshot-delete/${deleteKey}`);
+        return this.bearerHttpClient.delete(`/api/snapshot-delete/${deleteKey}`);
     }
 }

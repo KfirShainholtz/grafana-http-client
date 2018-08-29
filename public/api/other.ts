@@ -12,13 +12,13 @@ export default class OrganisationOther extends GrafanaHTTPApi {
      * Frontend Settings API
      */
     getSettings() {
-        return this.httpClient.get(`/api/frontend/settings`);
+        return this.bearerHttpClient.get(`/api/frontend/settings`);
     }
 
     /**
      * Login API
      */
     renewSessionBasedOnRememberCookie() {
-        return this.httpClient.get(`/api/login/ping`);
+        return this.bearerHttpClient.get(`/api/login/ping`);
     }
 }

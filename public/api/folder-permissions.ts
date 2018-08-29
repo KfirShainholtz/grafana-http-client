@@ -13,10 +13,10 @@ export default class FolderPermissions extends GrafanaHTTPApi {
     }
 
     getFolderPermissions(uid: number) {
-        return this.httpClient.get(`/api/folders/${uid}/permissions`);
+        return this.bearerHttpClient.get(`/api/folders/${uid}/permissions`);
     }
 
     updateFolderPermissions(uid: string, permissions: IPermissionModel) {
-        return this.httpClient.post(`/api/folders/${uid}`, permissions);
+        return this.bearerHttpClient.post(`/api/folders/${uid}`, permissions);
     }
 }

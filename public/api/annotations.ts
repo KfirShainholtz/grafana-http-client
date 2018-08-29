@@ -13,7 +13,7 @@ export default class Annotations extends GrafanaHTTPApi {
     }
 
     findAnnotations(annotationsSearch: Partial<IAnnotationsQueryModel>) {
-        return this.httpClient
+        return this.basicHttpClient
         .get(`/api/annotations${UrlParsing.parseUrlParams(annotationsSearch, UrlParseMethod.DuplicateArrayEntries)}`);
     }
 
@@ -30,10 +30,10 @@ export default class Annotations extends GrafanaHTTPApi {
     }
 
     deleteAnnotationById(annotationId: number) {
-        return this.httpClient.delete(`/api/annotations/${annotationId}`);
+        return this.bearerHttpClient.delete(`/api/annotations/${annotationId}`);
     }
 
     deleteAnnotationByRegionId(id: number) {
-        return this.httpClient.delete(`/api/annotations/region/${id}`);
+        return this.bearerHttpClient.delete(`/api/annotations/region/${id}`);
     }
 }

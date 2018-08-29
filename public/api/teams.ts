@@ -13,34 +13,34 @@ export default class Teams extends GrafanaHTTPApi {
     }
 
     searchTeamWithPaging(teamQuery: TeamQueryModel) {
-        return this.httpClient.get(`/api/teams/search${UrlParsing.parseUrlParams(teamQuery)}`);
+        return this.basicHttpClient.get(`/api/teams/search${UrlParsing.parseUrlParams(teamQuery)}`);
     }
 
     getTeamById(id: number) {
-        return this.httpClient.get(`/api/teams/${id}`);
+        return this.basicHttpClient.get(`/api/teams/${id}`);
     }
 
     addTeam(team: ITeamModel) {
-        return this.httpClient.post(`/api/teams`, team);
+        return this.basicHttpClient.post(`/api/teams`, team);
     }
 
     updateTeam(id: number, team: ITeamModel) {
-        return this.httpClient.put(`/api/teams/${id}`, team);
+        return this.basicHttpClient.put(`/api/teams/${id}`, team);
     }
 
     deleteTeamById(id: number) {
-        return this.httpClient.delete(`/api/teams/${id}`);
+        return this.basicHttpClient.delete(`/api/teams/${id}`);
     }
 
     getTeamMembers(teamId: number) {
-        return this.httpClient.get(`/api/teams/${teamId}/members`);
+        return this.basicHttpClient.get(`/api/teams/${teamId}/members`);
     }
 
     addTeamMember(teamId: number, teamMember: ITeamMemberModel) {
-        return this.httpClient.post(`/api/teams/${teamId}/members`, teamMember);
+        return this.basicHttpClient.post(`/api/teams/${teamId}/members`, teamMember);
     }
 
     removeMemberFromTeam(teamId: number, userId: number) {
-        return this.httpClient.delete(`/api/teams/${teamId}/members/${userId}`);
+        return this.basicHttpClient.delete(`/api/teams/${teamId}/members/${userId}`);
     }
 }
