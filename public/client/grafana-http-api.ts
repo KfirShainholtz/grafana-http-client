@@ -8,12 +8,6 @@ export default class GrafanaHTTPApi {
     private bearerAuth: IApiBearerAuth;
 
     constructor(baseURL?: string, bearerAuth? :IApiBearerAuth, basicAuth?: IBasicAuth) {
-        // todo: remove any, make default constructors
-        // TODO: maybe create another http client that will use the admin@admin
-        // TODO: maybe add the example request + response for each API
-        // TODO: maybe initialize lazy - on request, instead of in constructor? probably no one would use it first
-        // TODO: basic auth and authorization bearer colide.
-        // change to accept only a signle one/ toggle them each time we need a new approach.
         this.basicAuth = basicAuth!;
         this.bearerAuth = bearerAuth!;
 
